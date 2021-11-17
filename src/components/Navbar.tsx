@@ -25,18 +25,18 @@ export default function Navbar() {
 
   return (
     <nav className="navbar">
-      <Link href="/" underline="none" color="white">
+      <Link href="/" underline="none">
         Inicio
       </Link>
-      <Link href="/shop" underline="none" color="white">
+      <Link href="/shop" underline="none">
         Shop
       </Link>
       <Link href="/search">
-        <SearchIcon sx={{ fontSize: 90, color: "white" }} />
+        <SearchIcon sx={{ fontSize: 90 }} />
       </Link>
 
       <Button onClick={toggleDrawer(true)}>
-        <ShoppingCartIcon sx={{ fontSize: 90, color: "white" }} />
+        <ShoppingCartIcon sx={{ fontSize: 90 }} />
       </Button>
       <Drawer anchor={"right"} open={state} onClose={toggleDrawer(false)}>
         <Cart />
