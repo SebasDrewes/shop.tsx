@@ -7,15 +7,23 @@ import {
   ProductsReducer,
   initialProducts,
 } from "./components/context/ProductsReducer";
+import {
+  ProductsContext,
+  ProductsDispatchContext,
+} from "./components/context/ProductsContext";
 
 function App() {
   const [products, dispatch] = useReducer(ProductsReducer, initialProducts);
   return (
     <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/shop" element={<Shop />} />
-      </Routes>
+      <ProductsContext.Provider value={products}>
+        <ProductsDispatchContext.Provider value={dispatch}>
+          <Routes>
+            <Route path="/home" element={<Home />} />
+            <Route path="/shop" element={<Shop />} />
+          </Routes>
+        </ProductsDispatchContext.Provider>
+      </ProductsContext.Provider>
     </BrowserRouter>
   );
 }

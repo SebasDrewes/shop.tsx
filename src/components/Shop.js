@@ -2,21 +2,27 @@ import useProducts from "./useProducts";
 import "./Shop.scss";
 import Button from "@mui/material/Button";
 import Navbar from "./Navbar";
-type ProductsTypes = {
-  id: number;
-  title: string;
-  image: string;
-  description: string;
-  price: number;
-};
+import { useContext } from "react";
+import { ProductsDispatchContext } from "./context/ProductsContext";
+
 export default function Shop() {
+  const dispatch = useContext(ProductsDispatchContext);
   const products = useProducts();
+  function addToCart(product) {
+    dispatch({
+      type: "added",
+      id: product.id,
+      title: product.title,
+      image: product.image,
+      price: product.price,
+    });
+  }
   return (
     <>
       <Navbar />
       <h1>Welcome to Shop!</h1>
       <div className="productsContainer">
-        {products.map((product: ProductsTypes) => {
+        {products.map((product) => {
           return (
             <div key={product.id} className="productBox">
               <h3>{product.title}</h3>
@@ -29,7 +35,7 @@ export default function Shop() {
               <hr />
               <p>{product.price}</p>
               <hr />
-              <Button>Add to Cart</Button>
+              <Button onClick={() => addToCart(product)}>Add to Cart</Button>
             </div>
           );
         })}
