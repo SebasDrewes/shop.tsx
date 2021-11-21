@@ -1,8 +1,8 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
 import Drawer from "@mui/material/Drawer";
 import Button from "@mui/material/Button";
 import "./Navbar.scss";
-import Link from "@mui/material/Link";
+import { ProductsContext } from "./context/ProductsContext";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import { useNavigate } from "react-router-dom";
 import Cart from "./Cart";
@@ -10,7 +10,7 @@ import Cart from "./Cart";
 export default function Navbar() {
   const [state, setState] = useState(false);
   const navigate = useNavigate();
-
+  const products = useContext(ProductsContext);
   const toggleDrawer =
     (open: boolean) => (event: React.KeyboardEvent | React.MouseEvent) => {
       if (
@@ -26,9 +26,10 @@ export default function Navbar() {
 
   return (
     <nav className="navbar">
-      <Button onClick={() => navigate("/home")}>Inicio</Button>
-      <Button onClick={() => navigate("/shop")}>Shop</Button>
+      <h1 onClick={() => navigate("/home")}>Inicio</h1>
+      <h1 onClick={() => navigate("/shop")}>Shop</h1>
       <Button onClick={toggleDrawer(true)}>
+        {products?.length}
         <ShoppingCartIcon sx={{ fontSize: 50 }} />
       </Button>
       <Drawer anchor={"right"} open={state} onClose={toggleDrawer(false)}>
