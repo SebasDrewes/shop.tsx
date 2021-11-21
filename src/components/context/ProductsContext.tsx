@@ -1,5 +1,5 @@
-import { createContext } from "react";
-import { ProductsState, ProductsAction } from "./ProductsReducer";
-export const ProductsContext = createContext<ProductsState | null>(null);
-export const ProductsDispatchContext =
-  createContext<React.Dispatch<ProductsAction> | null>(null);
+import React, { createContext } from "react";
+import { ProductsState } from "./ProductsReducer";
+
+export const ProductsContext = createContext([] as ProductsState);
+export const ProductsDispatchContext = createContext<Function>(Function);
