@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./components/Home";
 import Shop from "./components/Shop";
+import ProductDetail from "./components/ProductDetail";
 import "./App.scss";
 import { useReducer } from "react";
 import {
@@ -21,6 +22,7 @@ function App() {
           <Routes>
             <Route path="/home" element={<Home />} />
             <Route path="/shop" element={<Shop />} />
+            <Route path="/shop/:id" element={<ProductDetail />} />
           </Routes>
         </ProductsDispatchContext.Provider>
       </ProductsContext.Provider>
