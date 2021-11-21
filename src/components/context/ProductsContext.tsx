@@ -1,4 +1,4 @@
-import React, { createContext } from "react";
+import { createContext } from "react";
 import { ProductsState } from "./ProductsReducer";
 
 export const ProductsContext = createContext([] as ProductsState);
