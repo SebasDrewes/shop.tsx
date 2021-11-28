@@ -1,6 +1,6 @@
 .shopProductImage {
   width: 150px;
-  height: auto;
+  height: 180px;
 }
 .shopProduct {
   margin: 30px;
@@ -10,5 +10,11 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
+}
+.productTitle {
+  width: 100%;
+  padding-top: 15px;
+  text-align: center;
+  border-top: 1px solid black;
 }
