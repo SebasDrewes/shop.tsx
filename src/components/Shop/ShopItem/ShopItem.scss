@@ -1,0 +1,14 @@
+.shopProductImage {
+  width: 150px;
+  height: auto;
+}
+.shopProduct {
+  margin: 30px;
+  position: relative;
+  border: 1px black solid;
+  width: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}

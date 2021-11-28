@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import "./ProductDetail.scss";
 export default function useProducts(id?: string) {
   const [products, setProducts] = useState([]);
   useEffect(() => {
