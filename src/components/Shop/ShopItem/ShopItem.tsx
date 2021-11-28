@@ -27,10 +27,15 @@ export default function ShopItem({ product }: ShopItemsPropTypes) {
         />
       </div>
       <h3 className="productTitle">{product.title}</h3>
-      <p>${product.price}</p>
-      <button className="shopProductButton" onClick={() => addToCart(product)}>
-        Add to cart
-      </button>
+      <div className="productInfo">
+        <p className="productPrice">${product.price}</p>
+        <button
+          className="shopProductButton"
+          onClick={() => addToCart(product)}
+        >
+          Add to cart
+        </button>
+      </div>
     </div>
   );
 }

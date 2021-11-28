@@ -1,13 +1,10 @@
 .shopProductImage {
   height: 100%;
+  margin-left: 25%;
 }
 .productImageContainer {
-  max-width: 300px;
   height: 180px;
   padding: 15px;
-  margin: 0px auto;
-  align-items: center;
-  display: flex;
 }
 .shopProduct {
   border: 1px black solid;
@@ -17,7 +14,22 @@
   margin: 25px;
 }
 .productTitle {
-  width: 100%;
-  padding-top: 15px;
+  padding: 15px;
+  height: 50px;
   border-top: 1px solid black;
+}
+.productPrice {
+  padding-left: 15px;
+}
+.shopProductButton {
+  cursor: pointer;
+  color: white;
+  background-color: black;
+  font-size: 1.5rem;
+  border-radius: 5px;
+  width: 90%;
+  margin-left: 20px;
+}
+.productInfo {
+  margin-bottom: 15px;
 }
