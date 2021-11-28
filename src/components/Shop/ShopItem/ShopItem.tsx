@@ -19,11 +19,13 @@ export default function ShopItem({ product }: ShopItemsPropTypes) {
   console.log(product);
   return (
     <div key={product.id} className="shopProduct">
-      <img
-        src={product.image}
-        className="shopProductImage"
-        alt={product.title}
-      />
+      <div className="productImageContainer">
+        <img
+          src={product.image}
+          className="shopProductImage"
+          alt={product.title}
+        />
+      </div>
       <h3 className="productTitle">{product.title}</h3>
       <p>${product.price}</p>
       <button className="shopProductButton" onClick={() => addToCart(product)}>
