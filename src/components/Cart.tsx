@@ -1,13 +1,11 @@
-import Box from "@mui/material/Box";
 import { useContext } from "react";
-import Button from "@mui/material/Button";
 import { ProductsContext } from "./context/ProductsContext";
 import "./Cart.scss";
-export default function Cart() {
+export default function Cart({ close }: any) {
   const products = useContext(ProductsContext);
   return (
-    <Box sx={{ width: 250 }} role="presentation">
-      <h1>Your shopping Cart</h1>
+    <div className="shoppingCart">
+      <h1 className="shoppingCartTitle">Your shopping Cart</h1>
       {products && products.length > 0
         ? products.map((product) => {
             return (
@@ -23,10 +21,11 @@ export default function Cart() {
           })
         : "Your cart is empty"}
       {products && products.length > 0 ? (
-        <Button>Checkout</Button>
+        <button>Checkout</button>
       ) : (
-        <Button>Browse products</Button>
+        <button>Browse products</button>
       )}
-    </Box>
+      <button onClick={() => close(false)}>Close</button>
+    </div>
   );
 }

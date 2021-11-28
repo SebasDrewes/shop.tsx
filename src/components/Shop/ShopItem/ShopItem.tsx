@@ -4,6 +4,8 @@ import { ProductsAction } from "../../context/ProductsReducer";
 import { useContext } from "react";
 import { ProductsDispatchContext } from "../../context/ProductsContext";
 import "./ShopItem.scss";
+import Alert from "@mui/material/Alert";
+import { AlertTitle } from "@mui/material";
 type ShopItemsPropTypes = {
   product: ProductsAction;
 };
@@ -19,6 +21,9 @@ export default function ShopItem({ product }: ShopItemsPropTypes) {
   const dispatch = useContext(ProductsDispatchContext);
   function addToCart(product: ProductsAction) {
     setOpen(true);
+    setTimeout(() => {
+      setOpen(false);
+    }, 5000);
     dispatch({
       type: "added",
       id: product.id,
@@ -34,6 +39,7 @@ export default function ShopItem({ product }: ShopItemsPropTypes) {
           src={product.image}
           className="shopProductImage"
           alt={product.title}
+          draggable={false}
         />
       </div>
       <h3 className="productTitle">{product.title}</h3>
@@ -43,14 +49,26 @@ export default function ShopItem({ product }: ShopItemsPropTypes) {
           className="shopProductButton"
           onClick={() => addToCart(product)}
         >
-          Add to cart
+          Add to Cart
         </button>
       </div>
-      <Snackbar
-        open={open}
-        onClose={handleClose}
-        message={`Added ${product.title} to the Shopping Cart`}
-      />
+      <Snackbar open={open} onClose={handleClose}>
+        <Alert
+          onClose={handleClose}
+          severity="success"
+          sx={{
+            color: "white",
+            backgroundColor: "black",
+            fontSize: "1.2rem",
+            fontWeight: "bold",
+            display: "flex",
+            alignItems: "center",
+          }}
+        >
+          <AlertTitle>{product.title}</AlertTitle>
+          Added to Cart
+        </Alert>
+      </Snackbar>
     </div>
   );
 }

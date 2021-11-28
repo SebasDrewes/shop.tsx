@@ -11,7 +11,7 @@ export default function Shop() {
   return (
     <>
       <Navbar />
-      <h1>Welcome to Shop!</h1>
+      <h1>Catalog</h1>
       <div className="productsContainer">
         {products.length ? (
           products.map((product: ProductsAction) => {

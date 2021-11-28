@@ -36,7 +36,7 @@ export default function Navbar() {
         <ShoppingCartIcon sx={{ fontSize: 50, color: "white" }} />
       </Button>
       <Drawer anchor={"right"} open={state} onClose={toggleDrawer(false)}>
-        <Cart />
+        <Cart close={setState} />
       </Drawer>
     </nav>
   );

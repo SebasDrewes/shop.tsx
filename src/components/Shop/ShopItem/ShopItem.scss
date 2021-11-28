@@ -13,6 +13,7 @@
   display: flex;
   flex-direction: column;
   width: 350px;
+  min-width: 350px;
   margin: 25px;
 }
 .productTitle {
@@ -34,4 +35,8 @@
 }
 .productInfo {
   margin-bottom: 15px;
+}
+
+.MuiSnackbarContent-root {
+  font-size: 50px;
 }
