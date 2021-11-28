@@ -1,3 +1,6 @@
+import * as React from "react";
+import Snackbar from "@mui/material/Snackbar";
+import Slide, { SlideProps } from "@mui/material/Slide";
 import { ProductsAction } from "../../context/ProductsReducer";
 import { useContext } from "react";
 import { ProductsDispatchContext } from "../../context/ProductsContext";
@@ -5,9 +8,20 @@ import "./ShopItem.scss";
 type ShopItemsPropTypes = {
   product: ProductsAction;
 };
+
 export default function ShopItem({ product }: ShopItemsPropTypes) {
+  /* SNACKBAR STATE AND FUNCTIONS */
+
+  const [open, setOpen] = React.useState(false);
+
+  const handleClose = () => {
+    setOpen(false);
+  };
+  /* SNACKBAR STATE AND FUNCTIONS */
+
   const dispatch = useContext(ProductsDispatchContext);
   function addToCart(product: ProductsAction) {
+    setOpen(true);
     dispatch({
       type: "added",
       id: product.id,
@@ -16,9 +30,8 @@ export default function ShopItem({ product }: ShopItemsPropTypes) {
       price: product.price,
     });
   }
-  console.log(product);
   return (
-    <div key={product.id} className="shopProduct">
+    <div className="shopProduct">
       <div className="productImageContainer">
         <img
           src={product.image}
@@ -36,6 +49,11 @@ export default function ShopItem({ product }: ShopItemsPropTypes) {
           Add to cart
         </button>
       </div>
+      <Snackbar
+        open={open}
+        onClose={handleClose}
+        message={`Added ${product.title} to Cart`}
+      />
     </div>
   );
 }

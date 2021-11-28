@@ -2,10 +2,10 @@ import { useState, useContext } from "react";
 import Drawer from "@mui/material/Drawer";
 import Button from "@mui/material/Button";
 import "./Navbar.scss";
-import { ProductsContext } from "./context/ProductsContext";
+import { ProductsContext } from "../context/ProductsContext";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import { useNavigate } from "react-router-dom";
-import Cart from "./Cart";
+import Cart from "../Cart";
 
 export default function Navbar() {
   const [state, setState] = useState(false);
@@ -28,9 +28,12 @@ export default function Navbar() {
     <nav className="navbar">
       <h1 onClick={() => navigate("/home")}>Inicio</h1>
       <h1 onClick={() => navigate("/shop")}>Shop</h1>
-      <Button onClick={toggleDrawer(true)}>
-        {products?.length}
-        <ShoppingCartIcon sx={{ fontSize: 50 }} />
+      <Button
+        sx={{ fontSize: 40, color: "white" }}
+        onClick={toggleDrawer(true)}
+      >
+        {products?.length > 0 ? products?.length : null}
+        <ShoppingCartIcon sx={{ fontSize: 50, color: "white" }} />
       </Button>
       <Drawer anchor={"right"} open={state} onClose={toggleDrawer(false)}>
         <Cart />

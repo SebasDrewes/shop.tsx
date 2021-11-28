@@ -7,7 +7,9 @@
   padding: 15px;
 }
 .shopProduct {
-  border: 1px black solid;
+  border: 1px rgb(206, 206, 206) solid;
+  background-color: white;
+  border-radius: 10px;
   display: flex;
   flex-direction: column;
   width: 350px;
@@ -16,7 +18,7 @@
 .productTitle {
   padding: 15px;
   height: 50px;
-  border-top: 1px solid black;
+  border-top: 1px rgb(206, 206, 206) solid;
 }
 .productPrice {
   padding-left: 15px;
