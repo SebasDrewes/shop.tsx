@@ -1,6 +1,5 @@
-import * as React from "react";
+import { useState } from "react";
 import Snackbar from "@mui/material/Snackbar";
-import Slide, { SlideProps } from "@mui/material/Slide";
 import { ProductsAction } from "../../context/ProductsReducer";
 import { useContext } from "react";
 import { ProductsDispatchContext } from "../../context/ProductsContext";
@@ -10,14 +9,12 @@ type ShopItemsPropTypes = {
 };
 
 export default function ShopItem({ product }: ShopItemsPropTypes) {
-  /* SNACKBAR STATE AND FUNCTIONS */
-
-  const [open, setOpen] = React.useState(false);
-
+  /* SNACKBAR STATE */
+  const [open, setOpen] = useState(false);
   const handleClose = () => {
     setOpen(false);
   };
-  /* SNACKBAR STATE AND FUNCTIONS */
+  /* SNACKBAR STATE  */
 
   const dispatch = useContext(ProductsDispatchContext);
   function addToCart(product: ProductsAction) {
@@ -52,7 +49,7 @@ export default function ShopItem({ product }: ShopItemsPropTypes) {
       <Snackbar
         open={open}
         onClose={handleClose}
-        message={`Added ${product.title} to Cart`}
+        message={`Added ${product.title} to the Shopping Cart`}
       />
     </div>
   );
