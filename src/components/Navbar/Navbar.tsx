@@ -26,8 +26,8 @@ export default function Navbar() {
 
   return (
     <nav className="navbar">
-      <h1 onClick={() => navigate("/home")}>Inicio</h1>
-      <h1 onClick={() => navigate("/shop")}>Shop</h1>
+      <h1 onClick={() => navigate("/home")}>Home</h1>
+      <h1 onClick={() => navigate("/shop")}>Products</h1>
       <Button
         sx={{ fontSize: 40, color: "white" }}
         onClick={toggleDrawer(true)}
