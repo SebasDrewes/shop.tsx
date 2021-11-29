@@ -2,10 +2,15 @@
 
 body {
   height: 100vh;
-  display: grid;
-  grid-template-rows: 1fr;
   margin: 0px;
   font-family: Poppins, sans-serif;
   font-size: 1.3rem;
   background-color: rgb(230, 231, 228);
+}
+a,
+a:hover,
+a:focus,
+a:active {
+  text-decoration: none;
+  color: inherit;
 }
