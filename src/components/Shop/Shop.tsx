@@ -4,6 +4,7 @@ import "./Shop.scss";
 import Navbar from "../Navbar/Navbar";
 import ShopItem from "./ShopItem/ShopItem";
 import SkeletonItem from "./ShopItem/SkeletonItem";
+import Footer from "../Footer/Footer";
 export default function Shop() {
   const products = useProducts();
 
@@ -25,6 +26,7 @@ export default function Shop() {
           </>
         )}
       </div>
+      <Footer />
     </>
   );
 }
