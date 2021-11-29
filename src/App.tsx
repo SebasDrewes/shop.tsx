@@ -1,16 +1,13 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Home from "./components/Home";
+import Home from "./components/Home/Home";
 import Shop from "./components/Shop/Shop";
 import "./App.scss";
 import { useReducer } from "react";
-import {
-  ProductsReducer,
-  initialProducts,
-} from "./components/context/ProductsReducer";
+import { ProductsReducer, initialProducts } from "./context/ProductsReducer";
 import {
   ProductsContext,
   ProductsDispatchContext,
-} from "./components/context/ProductsContext";
+} from "./context/ProductsContext";
 
 function App() {
   const [products, dispatch] = useReducer(ProductsReducer, initialProducts);

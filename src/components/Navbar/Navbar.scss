@@ -1,10 +1,17 @@
 .navbar {
-  display: grid;
-  grid-template-columns: 5fr 1fr 1fr;
-  align-items: center;
+  display: flex;
+  justify-content: space-around;
   font-size: 20px;
   color: rgb(255, 255, 255);
   background-color: black;
   padding-left: 5vw;
   padding-top: 2vh;
+  grid-area: header;
+}
+.navItem {
+  cursor: pointer;
+  transition: 100ms linear;
+}
+.navItem:hover {
+  transform: scale(1.2);
 }

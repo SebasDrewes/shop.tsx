@@ -1,8 +1,8 @@
 import { useState } from "react";
 import Snackbar from "@mui/material/Snackbar";
-import { ProductsAction } from "../../context/ProductsReducer";
+import { ProductsAction } from "../../../context/ProductsReducer";
 import { useContext } from "react";
-import { ProductsDispatchContext } from "../../context/ProductsContext";
+import { ProductsDispatchContext } from "../../../context/ProductsContext";
 import "./ShopItem.scss";
 import Alert from "@mui/material/Alert";
 import { AlertTitle } from "@mui/material";

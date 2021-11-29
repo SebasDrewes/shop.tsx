@@ -1,8 +1,7 @@
-import useProducts from "../useProducts";
-import { ProductsAction } from "../context/ProductsReducer";
+import useProducts from "../../hooks/useProducts";
+import { ProductsAction } from "../../context/ProductsReducer";
 import "./Shop.scss";
 import Navbar from "../Navbar/Navbar";
-import CircularProgress from "@mui/material/CircularProgress";
 import ShopItem from "./ShopItem/ShopItem";
 import SkeletonItem from "./ShopItem/SkeletonItem";
 export default function Shop() {

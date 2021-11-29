@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { ProductsContext } from "./context/ProductsContext";
+import { ProductsContext } from "../../context/ProductsContext";
 import "./Cart.scss";
 export default function Cart({ close }: any) {
   const products = useContext(ProductsContext);
