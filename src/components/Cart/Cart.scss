@@ -4,9 +4,17 @@
 }
 .shoppingCart {
   width: 450px;
+  height: 100vh;
   display: flex;
   flex-direction: column;
+  background-color: rgb(244, 245, 243);
 }
 .shoppingCartTitle {
   width: 90vw;
+}
+.cartTitleContainer {
+  display: flex;
+  align-items: center;
+  margin-right: 15px;
+  margin-left: 15px;
 }

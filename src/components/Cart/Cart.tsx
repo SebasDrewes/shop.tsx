@@ -1,31 +1,25 @@
 import { useContext } from "react";
 import { ProductsContext } from "../../context/ProductsContext";
+import CartItem from "./CartItem/CartItem";
+import CloseIcon from "@mui/icons-material/Close";
 import "./Cart.scss";
 export default function Cart({ close }: any) {
   const products = useContext(ProductsContext);
   return (
     <div className="shoppingCart">
-      <h1 className="shoppingCartTitle">Your shopping Cart</h1>
+      <div className="cartTitleContainer">
+        <h1 className="shoppingCartTitle">Cart ({products.length} items)</h1>
+        <CloseIcon
+          sx={{ fontSize: "3rem", cursor: "pointer" }}
+          onClick={() => close(false)}
+        />
+      </div>
       {products && products.length > 0
         ? products.map((product) => {
-            return (
-              <div key={product.id}>
-                <img
-                  className="cartItemImage"
-                  alt={product.title}
-                  src={product.image}
-                />
-                <p>{product.price}</p>
-              </div>
-            );
+            return <CartItem product={product} key={product.id} />;
           })
         : "Your cart is empty"}
-      {products && products.length > 0 ? (
-        <button>Checkout</button>
-      ) : (
-        <button>Browse products</button>
-      )}
-      <button onClick={() => close(false)}>Close</button>
+      {products && products.length > 0 ? <button>Checkout</button> : null}
     </div>
   );
 }

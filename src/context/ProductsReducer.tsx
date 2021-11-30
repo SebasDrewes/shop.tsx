@@ -7,7 +7,7 @@ export type ProductsState = {
 }[];
 
 export type ProductsAction = {
-  type: string;
+  type?: string;
   id: number;
   title: string;
   image: string;
