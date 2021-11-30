@@ -14,12 +14,19 @@ export default function Cart({ close }: any) {
           onClick={() => close(false)}
         />
       </div>
-      {products && products.length > 0
-        ? products.map((product) => {
-            return <CartItem product={product} key={product.id} />;
-          })
-        : "Your cart is empty"}
-      {products && products.length > 0 ? <button>Checkout</button> : null}
+      <div className="cartProductsContainer">
+        {products && products.length > 0
+          ? products.map((product) => {
+              return <CartItem product={product} key={product.id} />;
+            })
+          : "Your cart is empty"}
+      </div>
+      {products && products.length > 0 ? (
+        <div className="totalContainer">
+          <h1 className="total">Total $150</h1>
+          <button className="checkoutButton">Checkout</button>
+        </div>
+      ) : null}
     </div>
   );
 }
