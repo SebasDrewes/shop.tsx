@@ -20,8 +20,8 @@
 }
 .cartProductsContainer {
   border-top: 1px rgb(206, 206, 206) solid;
-  height: 70vh;
-  overflow: scroll;
+  max-height: 70vh;
+  overflow: auto;
   overflow-x: hidden;
 }
 .totalContainer {

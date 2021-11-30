@@ -5,6 +5,7 @@ import CloseIcon from "@mui/icons-material/Close";
 import "./Cart.scss";
 export default function Cart({ close }: any) {
   const products = useContext(ProductsContext);
+  console.log(products);
   return (
     <div className="shoppingCart">
       <div className="cartTitleContainer">
