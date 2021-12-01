@@ -45,7 +45,14 @@ export function ProductsReducer(
       ];
     }
     case "deleted": {
-      return products.filter((product) => product.id !== action.id);
+      return products
+        .map((product) => {
+          if (product.id === action.id) {
+            return { ...product, amount: product.amount - 1 };
+          }
+          return product;
+        })
+        .filter((product) => product.amount > 0);
     }
     default: {
       throw Error("Unknown action: " + action.type);

@@ -21,6 +21,15 @@ export default function CartItem({ product }: ShopItemsPropTypes) {
       price: product.price,
     });
   }
+  function deleteFromCart(product: ProductsAction) {
+    dispatch({
+      type: "deleted",
+      id: product.id,
+      title: product.title,
+      image: product.image,
+      price: product.price,
+    });
+  }
   return (
     <div className="cartContainer">
       <div className="cartProduct">
@@ -33,12 +42,20 @@ export default function CartItem({ product }: ShopItemsPropTypes) {
           />
         </div>
         <h3 className="cartProductTitle">{product.title}</h3>
-        <p className="productPrice">${product.price}</p>
+        <p className="productPrice">
+          ${(product.price * product.amount).toFixed(2)}
+        </p>
       </div>
       <div className="quantity">
-        <AddIcon sx={{ marginRight: "10px", cursor: "pointer" }} />
+        <AddIcon
+          onClick={() => addToCart(product)}
+          sx={{ marginRight: "10px", cursor: "pointer" }}
+        />
         {product.amount}
-        <RemoveIcon sx={{ marginLeft: "10px", cursor: "pointer" }} />
+        <RemoveIcon
+          onClick={() => deleteFromCart(product)}
+          sx={{ marginLeft: "10px", cursor: "pointer" }}
+        />
       </div>
     </div>
   );

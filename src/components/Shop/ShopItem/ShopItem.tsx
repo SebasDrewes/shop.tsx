@@ -44,7 +44,7 @@ export default function ShopItem({ product }: ShopItemsPropTypes) {
       </div>
       <h3 className="productTitle">{product.title}</h3>
       <div className="productInfo">
-        <p className="productPrice">${product.price}</p>
+        <p className="productPrice">${product.price.toFixed(2)}</p>
         <button
           className="shopProductButton"
           onClick={() => addToCart(product)}
