@@ -38,10 +38,12 @@ export default function Cart({ close }: any) {
           </>
         )}
       </div>
-      <div className="totalContainer">
-        <h1 className="total">Total $150</h1>
-        <button className="checkoutButton">Checkout</button>
-      </div>
+      {products && products.length > 0 ? (
+        <div className="totalContainer">
+          <h1 className="total">Total $150</h1>
+          <button className="checkoutButton">Checkout</button>
+        </div>
+      ) : null}
     </div>
   );
 }
