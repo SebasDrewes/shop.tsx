@@ -4,6 +4,7 @@ export type ProductsState = {
   title: string;
   image: string;
   price: number;
+  amount: number;
 }[];
 
 export type ProductsAction = {
@@ -12,6 +13,7 @@ export type ProductsAction = {
   title: string;
   image: string;
   price: number;
+  amount: number;
 };
 export function ProductsReducer(
   products: ProductsState,
@@ -19,6 +21,18 @@ export function ProductsReducer(
 ) {
   switch (action.type) {
     case "added": {
+      if (
+        products.some((product) => {
+          return product.id === action.id;
+        })
+      ) {
+        return products.map((product) => {
+          if (product.id === action.id) {
+            return { ...product, amount: product.amount + 1 };
+          }
+          return product;
+        });
+      }
       return [
         ...products,
         {
@@ -26,6 +40,7 @@ export function ProductsReducer(
           title: action.title,
           image: action.image,
           price: action.price,
+          amount: 1,
         },
       ];
     }

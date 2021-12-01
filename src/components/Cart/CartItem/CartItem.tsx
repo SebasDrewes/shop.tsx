@@ -37,7 +37,7 @@ export default function CartItem({ product }: ShopItemsPropTypes) {
       </div>
       <div className="quantity">
         <AddIcon sx={{ marginRight: "10px", cursor: "pointer" }} />
-        2
+        {product.amount}
         <RemoveIcon sx={{ marginLeft: "10px", cursor: "pointer" }} />
       </div>
     </div>
