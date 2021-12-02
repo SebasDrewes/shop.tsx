@@ -1,0 +1,19 @@
+.aboutUs {
+  height: 66.3vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("./aboutUs.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: white;
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  padding: 50px;
+  font-size: 2rem;
+  text-align: center;
+  align-items: center;
+}
+.aboutText {
+  margin: 0;
+}

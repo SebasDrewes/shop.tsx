@@ -39,7 +39,7 @@ export default function Navbar() {
       <h1 onClick={() => navigate("/shop")} className="navItem">
         Products
       </h1>
-      <h1 onClick={() => navigate("/shop")} className="navItem">
+      <h1 onClick={() => navigate("/about")} className="navItem">
         About Us
       </h1>
       <Button

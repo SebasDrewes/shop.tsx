@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./components/Home/Home";
 import Shop from "./components/Shop/Shop";
+import AboutUs from "./components/AboutUs/AboutUs";
 import { useReducer } from "react";
 import { ProductsReducer, initialProducts } from "./context/ProductsReducer";
 import {
@@ -17,6 +18,7 @@ export default function App() {
           <Routes>
             <Route path="/home" element={<Home />} />
             <Route path="/shop" element={<Shop />} />
+            <Route path="/about" element={<AboutUs />} />
           </Routes>
         </ProductsDispatchContext.Provider>
       </ProductsContext.Provider>
