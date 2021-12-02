@@ -11,6 +11,13 @@ export default function Navbar() {
   const [state, setState] = useState(false);
   const navigate = useNavigate();
   const products = useContext(ProductsContext);
+  const amountReducer = (
+    previousValue: number,
+    currentValue: {
+      amount: number;
+    }
+  ) => previousValue + currentValue.amount;
+  const productsAmount = products.reduce(amountReducer, 0);
   const toggleDrawer =
     (open: boolean) => (event: React.KeyboardEvent | React.MouseEvent) => {
       if (
@@ -20,12 +27,12 @@ export default function Navbar() {
       ) {
         return;
       }
-
       setState(open);
     };
 
   return (
     <nav className="navbar">
+      <h1>Sebas</h1>
       <h1 onClick={() => navigate("/home")} className="navItem">
         Home
       </h1>
@@ -37,7 +44,7 @@ export default function Navbar() {
         onClick={toggleDrawer(true)}
         className="navItem"
       >
-        {products?.length > 0 ? products?.length : null}
+        {products?.length > 0 ? productsAmount : null}
         <ShoppingCartIcon sx={{ fontSize: 50, color: "white" }} />
       </Button>
       <Drawer anchor={"right"} open={state} onClose={toggleDrawer(false)}>

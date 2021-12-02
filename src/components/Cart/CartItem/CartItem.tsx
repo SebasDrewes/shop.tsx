@@ -1,5 +1,3 @@
-import { useState } from "react";
-import Snackbar from "@mui/material/Snackbar";
 import { ProductsAction } from "../../../context/ProductsReducer";
 import { useContext } from "react";
 import { ProductsDispatchContext } from "../../../context/ProductsContext";
@@ -42,9 +40,7 @@ export default function CartItem({ product }: ShopItemsPropTypes) {
           />
         </div>
         <h3 className="cartProductTitle">{product.title}</h3>
-        <p className="productPrice">
-          ${(product.price * product.amount).toFixed(2)}
-        </p>
+        <p className="productPrice">${product.price.toFixed(2)}</p>
       </div>
       <div className="quantity">
         <AddIcon

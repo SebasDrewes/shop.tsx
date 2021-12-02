@@ -7,15 +7,29 @@ import "./Cart.scss";
 export default function Cart({ close }: any) {
   const navigate = useNavigate();
   const products = useContext(ProductsContext);
+  const sumReducer = (
+    previousValue: number,
+    currentValue: {
+      price: number;
+      amount: number;
+    }
+  ) => previousValue + currentValue.price * currentValue.amount;
+  const productSum = products.reduce(sumReducer, 0);
+  const amountReducer = (
+    previousValue: number,
+    currentValue: {
+      amount: number;
+    }
+  ) => previousValue + currentValue.amount;
+  const productsAmount = products.reduce(amountReducer, 0);
   function handleBrowseClick() {
     navigate("/shop");
     close(false);
   }
-  console.log(products);
   return (
     <div className="shoppingCart">
       <div className="cartTitleContainer">
-        <h1 className="shoppingCartTitle">Cart ({products.length} items)</h1>
+        <h1 className="shoppingCartTitle">Cart ({productsAmount} items)</h1>
         <CloseIcon
           sx={{ fontSize: "3rem", cursor: "pointer" }}
           onClick={() => close(false)}
@@ -40,7 +54,7 @@ export default function Cart({ close }: any) {
       </div>
       {products && products.length > 0 ? (
         <div className="totalContainer">
-          <h1 className="total">Total $150</h1>
+          <h1 className="total">Total ${productSum.toFixed(2)}</h1>
           <button className="checkoutButton">Checkout</button>
         </div>
       ) : null}
