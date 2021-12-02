@@ -1,0 +1,19 @@
+.customDeal {
+  margin: 35px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.customDealImage {
+  width: 450px;
+  height: 600px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+.dealText {
+  margin-bottom: 0;
+}

@@ -39,6 +39,9 @@ export default function Navbar() {
       <h1 onClick={() => navigate("/shop")} className="navItem">
         Products
       </h1>
+      <h1 onClick={() => navigate("/shop")} className="navItem">
+        About Us
+      </h1>
       <Button
         sx={{ fontSize: 40, color: "white" }}
         onClick={toggleDrawer(true)}
