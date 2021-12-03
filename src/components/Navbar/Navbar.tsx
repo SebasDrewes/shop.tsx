@@ -32,7 +32,7 @@ export default function Navbar() {
 
   return (
     <nav className="navbar">
-      <h1>Sebas</h1>
+      <h1 className="logo">SHOP.TSX</h1>
       <h1 onClick={() => navigate("/home")} className="navItem">
         Home
       </h1>
@@ -43,12 +43,14 @@ export default function Navbar() {
         About Us
       </h1>
       <Button
-        sx={{ fontSize: 40, color: "white" }}
+        sx={{ fontSize: 40, color: "white", padding: 0 }}
         onClick={toggleDrawer(true)}
-        className="navItem"
       >
         {products?.length > 0 ? productsAmount : null}
-        <ShoppingCartIcon sx={{ fontSize: 50, color: "white" }} />
+        <ShoppingCartIcon
+          onClick={toggleDrawer(true)}
+          sx={{ fontSize: 50, color: "white", padding: 0 }}
+        />
       </Button>
       <Drawer anchor={"right"} open={state} onClose={toggleDrawer(false)}>
         <Cart close={setState} />

@@ -24,18 +24,19 @@
 .productPrice {
   padding-left: 15px;
 }
-.shopProductButton {
+.shopButton {
   cursor: pointer;
   color: white;
   font-family: poppins;
   background-color: black;
   font-size: 1.6rem;
+  font-weight: bold;
   border-radius: 5px;
   width: 90%;
   margin-left: 20px;
   transition: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
-.shopProductButton:hover {
+.shopButton:hover {
   color: black;
   background-color: white;
 }

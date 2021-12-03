@@ -1,5 +1,5 @@
 .aboutUs {
-  height: 66.3vh;
+  min-height: calc(100% - 24%);
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url("./aboutUs.jpg");
   background-position: center;
@@ -15,5 +15,5 @@
   align-items: center;
 }
 .aboutText {
-  margin: 0;
+  margin: 10px;
 }

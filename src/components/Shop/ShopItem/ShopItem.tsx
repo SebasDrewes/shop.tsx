@@ -45,10 +45,7 @@ export default function ShopItem({ product }: ShopItemsPropTypes) {
       <h3 className="productTitle">{product.title}</h3>
       <div className="productInfo">
         <p className="productPrice">${product.price.toFixed(2)}</p>
-        <button
-          className="shopProductButton"
-          onClick={() => addToCart(product)}
-        >
+        <button className="shopButton" onClick={() => addToCart(product)}>
           Add to Cart
         </button>
       </div>

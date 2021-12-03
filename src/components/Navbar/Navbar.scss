@@ -1,15 +1,26 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap");
+
+.logo {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+}
+
 .navbar {
-  display: flex;
-  justify-content: space-around;
+  display: grid;
+  align-items: center;
+  grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
   font-size: 1.5rem;
   color: rgb(255, 255, 255);
   background-color: black;
   padding-left: 5vw;
+  height: 14vh;
 }
 .navItem {
   cursor: pointer;
+  padding: 0;
   transition: 100ms linear;
+  overflow: hidden;
 }
 .navItem:hover {
-  transform: scale(1.2);
+  transform: scale(1.1);
 }
