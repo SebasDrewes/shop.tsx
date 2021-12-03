@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-export default function useProducts(id?: string) {
+export default function useProducts() {
   const [products, setProducts] = useState([]);
   useEffect(() => {
     (async function getData() {
@@ -16,6 +16,6 @@ export default function useProducts(id?: string) {
         throw Error("Unable to fetch data");
       }
     })();
-  }, [id]);
+  }, []);
   return products;
 }

@@ -12,11 +12,13 @@ export default function Deals() {
           image={menClothes}
           text={"Men's Clothing"}
           discount={"30"}
+          category="men's clothing"
         />
         <CustomDeal
           image={womenClothes}
           text={"Women's Clothing"}
           discount={"35"}
+          category="women's clothing"
         />
         <CustomDeal image={accessories} text={"Accesories"} discount={"40"} />
       </div>

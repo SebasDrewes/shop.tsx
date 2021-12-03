@@ -9,6 +9,7 @@ export type ProductsState = {
 
 export type ProductsAction = {
   type?: string;
+  category?: string;
   id: number;
   title: string;
   image: string;

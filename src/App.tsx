@@ -17,6 +17,7 @@ export default function App() {
         <ProductsDispatchContext.Provider value={dispatch}>
           <Routes>
             <Route path="/home" element={<Home />} />
+            <Route path="/shop/:category" element={<Shop />} />
             <Route path="/shop" element={<Shop />} />
             <Route path="/about" element={<AboutUs />} />
           </Routes>
