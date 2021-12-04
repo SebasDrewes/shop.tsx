@@ -20,12 +20,6 @@ export default function Deals() {
           discount={"35"}
           category="women"
         />
-        <CustomDeal
-          image={accessories}
-          text={"Accesories"}
-          discount={"40"}
-          category="accesories"
-        />
       </div>
     </div>
   );
