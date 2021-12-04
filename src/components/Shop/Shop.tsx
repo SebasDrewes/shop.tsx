@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import useProducts from "../../hooks/useProducts";
 import { ProductsAction } from "../../context/ProductsReducer";
 import "./Shop.scss";
@@ -8,8 +8,19 @@ import SkeletonItem from "./ShopItem/SkeletonItem";
 import Footer from "../Footer/Footer";
 import { useParams } from "react-router";
 export default function Shop() {
+  const [category, setCategory] = useState("");
   const param = useParams();
   const products = useProducts();
+  useEffect(() => {
+    if (param.category === "men") {
+      setCategory("men's clothing");
+    } else if (param.category === "women") {
+      setCategory("women's clothing");
+    } else {
+      setCategory("");
+    }
+  }, [param]);
+
   return (
     <>
       <Navbar />
@@ -18,8 +29,8 @@ export default function Shop() {
         {products.length ? (
           products
             .filter((product: ProductsAction) => {
-              if (param.category) {
-                return product.category === param.category;
+              if (category) {
+                return product.category === category;
               }
               return product;
             })

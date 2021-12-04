@@ -23,7 +23,7 @@ export default function CustomDeal({
         onClick={() => navigate(`/shop/${category}`)}
         className="shopButton"
       >
-        Shop Now
+        Shop
       </button>
     </div>
   );
