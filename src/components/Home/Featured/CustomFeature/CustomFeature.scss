@@ -1,18 +1,22 @@
-.customDeal {
+.featured {
   margin: 35px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  transition: 200ms linear;
 }
 
-.customDealImage {
-  width: 30vw;
+.featuredImage {
+  width: 400px;
   height: 600px;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
+}
+.featured:hover {
+  transform: scale(1.1);
 }
 .dealText {
   margin-bottom: 0;

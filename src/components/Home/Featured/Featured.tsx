@@ -1,23 +1,20 @@
-import CustomDeal from "./CustomDeal/CustomDeal";
+import CustomFeature from "./CustomFeature/CustomFeature";
 import menClothes from "./menClothes.jpeg";
 import womenClothes from "./womenClothes.jpg";
-import accessories from "./accessories.jpg";
-import "./Deals.scss";
-export default function Deals() {
+import "./Featured.scss";
+export default function Featured() {
   return (
     <div>
-      <h1 className="dealsTitle">Deals of the Week</h1>
+      <h1 className="dealsTitle">Featured Collections</h1>
       <div className="deals">
-        <CustomDeal
+        <CustomFeature
           image={menClothes}
           text={"Men's Clothing"}
-          discount={"30"}
           category="men"
         />
-        <CustomDeal
+        <CustomFeature
           image={womenClothes}
           text={"Women's Clothing"}
-          discount={"35"}
           category="women"
         />
       </div>
