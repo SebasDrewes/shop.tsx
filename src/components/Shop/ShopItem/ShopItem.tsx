@@ -56,6 +56,7 @@ export default function ShopItem({ product }: ShopItemsPropTypes) {
           sx={{
             color: "white",
             backgroundColor: "black",
+            border: "1px solid #f4f5f3",
             fontSize: "1.2rem",
             fontWeight: "bold",
             display: "flex",
