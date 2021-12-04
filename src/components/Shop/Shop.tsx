@@ -12,19 +12,51 @@ export default function Shop() {
   const param = useParams();
   const products = useProducts();
   useEffect(() => {
-    if (param.category === "men") {
-      setCategory("men's clothing");
-    } else if (param.category === "women") {
-      setCategory("women's clothing");
-    } else {
-      setCategory("");
+    switch (param.category) {
+      case "men":
+        setCategory("men's clothing");
+        break;
+      case "women":
+        setCategory("women's clothing");
+        break;
+      case "accesories":
+        setCategory("accesories");
+        break;
+      default:
+        setCategory("");
     }
   }, [param]);
+
+  function handleCategoryClick(category: string) {
+    setCategory(category);
+  }
 
   return (
     <>
       <Navbar />
-      <h1 className="shopTitle">All products</h1>
+      <div className="category">
+        <h1 className="shopTitle" onClick={() => handleCategoryClick("")}>
+          All products
+        </h1>
+        <h1
+          className="shopTitle"
+          onClick={() => handleCategoryClick("men's clothing")}
+        >
+          Men's Clothing
+        </h1>
+        <h1
+          className="shopTitle"
+          onClick={() => handleCategoryClick("women's clothing")}
+        >
+          Women's Clothing
+        </h1>
+        <h1
+          className="shopTitle"
+          onClick={() => handleCategoryClick("accesories")}
+        >
+          Accesories
+        </h1>
+      </div>
       <div className="productsContainer">
         {products.length ? (
           products
