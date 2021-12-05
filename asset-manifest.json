@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/shop.tsx/static/css/main.b4412b52.chunk.css",
+    "main.js": "/shop.tsx/static/js/main.8418151c.chunk.js",
+    "main.js.map": "/shop.tsx/static/js/main.8418151c.chunk.js.map",
+    "runtime-main.js": "/shop.tsx/static/js/runtime-main.f05a21fb.js",
+    "runtime-main.js.map": "/shop.tsx/static/js/runtime-main.f05a21fb.js.map",
+    "static/js/2.cf3e56cf.chunk.js": "/shop.tsx/static/js/2.cf3e56cf.chunk.js",
+    "static/js/2.cf3e56cf.chunk.js.map": "/shop.tsx/static/js/2.cf3e56cf.chunk.js.map",
+    "static/js/3.46b15785.chunk.js": "/shop.tsx/static/js/3.46b15785.chunk.js",
+    "static/js/3.46b15785.chunk.js.map": "/shop.tsx/static/js/3.46b15785.chunk.js.map",
+    "index.html": "/shop.tsx/index.html",
+    "static/css/main.b4412b52.chunk.css.map": "/shop.tsx/static/css/main.b4412b52.chunk.css.map",
+    "static/js/2.cf3e56cf.chunk.js.LICENSE.txt": "/shop.tsx/static/js/2.cf3e56cf.chunk.js.LICENSE.txt",
+    "static/media/AboutUs.scss": "/shop.tsx/static/media/aboutUs.ff4929fb.jpg",
+    "static/media/MainImage.scss": "/shop.tsx/static/media/mainImage.7b0e1de7.jpg",
+    "static/media/menClothes.b38735f3.jpeg": "/shop.tsx/static/media/menClothes.b38735f3.jpeg",
+    "static/media/womenClothes.54bbc238.jpg": "/shop.tsx/static/media/womenClothes.54bbc238.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.f05a21fb.js",
+    "static/js/2.cf3e56cf.chunk.js",
+    "static/css/main.b4412b52.chunk.css",
+    "static/js/main.8418151c.chunk.js"
+  ]
+}
