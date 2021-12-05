@@ -15,6 +15,7 @@ export default function CustomFeature({
   return (
     <div className="featured">
       <h1 className="dealText">{text}</h1>
+      <h1 className="shopNowFeature">Shop now</h1>
       <img
         src={image}
         alt={text}

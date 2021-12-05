@@ -28,11 +28,15 @@ export default function Cart({ close }: any) {
     navigate("/shop");
     close(false);
   }
+  function handleHomeClick() {
+    navigate("/home");
+    close(false);
+  }
   return (
     <div className="shoppingCart">
       {width < 750 ? (
         <div className="titlesContainer">
-          <h1 onClick={() => navigate("/home")} className="cartTitle">
+          <h1 onClick={() => handleHomeClick()} className="cartTitle">
             Home
           </h1>
           <h1 onClick={() => navigate("/shop")} className="cartTitle">
