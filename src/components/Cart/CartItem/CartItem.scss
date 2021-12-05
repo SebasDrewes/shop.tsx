@@ -34,3 +34,11 @@
   width: 100%;
   border-top: 1px rgb(206, 206, 206) solid;
 }
+@media (max-width: 450px) {
+  .cartContainer {
+    width: 100%;
+    min-width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+}

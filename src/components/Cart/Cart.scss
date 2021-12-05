@@ -55,3 +55,11 @@
   padding-left: 15px;
   font-size: 1.5rem;
 }
+@media (max-width: 450px) {
+  .shoppingCart {
+    width: 80vw;
+  }
+  .shoppingCartTitle {
+    font-size: 1.5rem;
+  }
+}
