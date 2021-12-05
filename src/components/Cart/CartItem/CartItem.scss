@@ -39,9 +39,12 @@
     width: 100%;
     min-width: 100%;
     margin: 0;
-    padding: 0;
+    padding: 5px;
   }
   .quantity {
     padding: 0;
+  }
+  .cartProductTitle {
+    font-size: 1rem;
   }
 }

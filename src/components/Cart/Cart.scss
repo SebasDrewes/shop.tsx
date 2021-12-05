@@ -55,9 +55,26 @@
   padding-left: 15px;
   font-size: 1.5rem;
 }
+.cartTitle {
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: 100ms linear;
+}
+.cartTitle:hover {
+  transform: scale(1.1);
+}
+.titlesContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  border-bottom: 1px rgb(206, 206, 206) solid;
+}
 @media (max-width: 450px) {
   .shoppingCart {
     width: 80vw;
+  }
+  .cartTitle {
+    font-size: 1rem;
   }
   .shoppingCartTitle {
     font-size: 1.5rem;

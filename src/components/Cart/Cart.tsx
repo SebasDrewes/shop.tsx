@@ -3,8 +3,10 @@ import { ProductsContext } from "../../context/ProductsContext";
 import { useNavigate } from "react-router-dom";
 import CartItem from "./CartItem/CartItem";
 import CloseIcon from "@mui/icons-material/Close";
+import useWindowDimensions from "./../../hooks/useWindowDimensions";
 import "./Cart.scss";
 export default function Cart({ close }: any) {
+  const { width } = useWindowDimensions();
   const navigate = useNavigate();
   const products = useContext(ProductsContext);
   const sumReducer = (
@@ -28,6 +30,19 @@ export default function Cart({ close }: any) {
   }
   return (
     <div className="shoppingCart">
+      {width < 750 ? (
+        <div className="titlesContainer">
+          <h1 onClick={() => navigate("/home")} className="cartTitle">
+            Home
+          </h1>
+          <h1 onClick={() => navigate("/shop")} className="cartTitle">
+            Products
+          </h1>
+          <h1 onClick={() => navigate("/about")} className="cartTitle">
+            About Us
+          </h1>
+        </div>
+      ) : null}
       <div className="cartTitleContainer">
         <h1 className="shoppingCartTitle">Cart ({productsAmount} items)</h1>
         <CloseIcon
