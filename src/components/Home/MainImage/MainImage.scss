@@ -28,3 +28,9 @@
   font-weight: bold;
   margin-left: 20vw;
 }
+@media (max-width: 500px) {
+  .imageText {
+    font-size: 3rem;
+    margin-left: 5vw;
+  }
+}
