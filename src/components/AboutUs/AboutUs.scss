@@ -17,3 +17,8 @@
 .aboutText {
   margin: 10px;
 }
+@media (max-width: 500px) {
+  .aboutUs {
+    font-size: 1.3rem;
+  }
+}

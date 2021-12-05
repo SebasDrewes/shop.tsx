@@ -27,10 +27,13 @@
   }
 }
 @media (max-width: 550px) {
+  .footer {
+    font-size: 1.3em !important;
+  }
   .LinkedInIcon {
-    font-size: 1rem;
+    font-size: 1.3rem !important;
   }
   .GitHubIcon {
-    font-size: 1em;
+    font-size: 1.3rem !important;
   }
 }
