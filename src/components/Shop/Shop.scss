@@ -8,6 +8,8 @@
 .shopCategory {
   display: inline-block;
   position: relative;
+  margin: 15px;
+  text-align: center;
 }
 .shopCategory:after {
   content: "";
