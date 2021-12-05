@@ -43,6 +43,7 @@
 .shopCategoryClicked {
   display: inline-block;
   position: relative;
+  margin: 15px;
 }
 .shopCategoryClicked:after {
   transform: scaleX(1);
