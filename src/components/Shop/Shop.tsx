@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router";
 import useProducts from "../../hooks/useProducts";
-import { ProductsAction } from "../../context/ProductsReducer";
+import { ProductType } from "../../context/ProductsReducer";
 import "./Shop.scss";
 import Navbar from "../Navbar/Navbar";
 import ShopItem from "./ShopItem/ShopItem";
@@ -29,17 +29,13 @@ export default function Shop() {
     }
   }, [param]);
 
-  function handleCategoryClick(category: string) {
-    navigate(`${category}`);
-  }
-
   return (
     <>
       <Navbar />
       <div className="category">
         <h1
           className={category === "" ? "shopCategoryClicked" : "shopCategory"}
-          onClick={() => handleCategoryClick("/shop")}
+          onClick={() => navigate("/shop.tsx/products")}
         >
           All products
         </h1>
@@ -49,7 +45,7 @@ export default function Shop() {
               ? "shopCategoryClicked"
               : "shopCategory"
           }
-          onClick={() => handleCategoryClick("/shop/men")}
+          onClick={() => navigate("/shop.tsx/products/men")}
         >
           Men's Clothing
         </h1>
@@ -59,7 +55,7 @@ export default function Shop() {
               ? "shopCategoryClicked"
               : "shopCategory"
           }
-          onClick={() => handleCategoryClick("/shop/women")}
+          onClick={() => navigate("/shop.tsx/products/women")}
         >
           Women's Clothing
         </h1>
@@ -67,13 +63,13 @@ export default function Shop() {
       <div className="productsContainer">
         {products.length ? (
           products
-            .filter((product: ProductsAction) => {
+            .filter((product: ProductType) => {
               if (category) {
                 return product.category === category;
               }
               return product;
             })
-            .map((product: ProductsAction) => {
+            .map((product: ProductType) => {
               return <ShopItem product={product} key={product.id} />;
             })
         ) : (

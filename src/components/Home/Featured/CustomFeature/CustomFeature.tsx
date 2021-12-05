@@ -45,7 +45,7 @@ export default function CustomFeature({
         src={image}
         alt={text}
         className="featuredImage"
-        onClick={() => navigate(`/shop/${category}`)}
+        onClick={() => navigate(`/shop.tsx/products/${category}`)}
       />
     </div>
   );

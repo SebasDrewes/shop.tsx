@@ -8,6 +8,7 @@ import {
   ProductsContext,
   ProductsDispatchContext,
 } from "./context/ProductsContext";
+import "./App.scss";
 
 export default function App() {
   const [products, dispatch] = useReducer(ProductsReducer, initialProducts);
@@ -16,10 +17,10 @@ export default function App() {
       <ProductsContext.Provider value={products}>
         <ProductsDispatchContext.Provider value={dispatch}>
           <Routes>
-            <Route path="/home" element={<Home />} />
-            <Route path="/shop/:category" element={<Shop />} />
-            <Route path="/shop" element={<Shop />} />
-            <Route path="/about" element={<AboutUs />} />
+            <Route path="/shop.tsx" element={<Home />} />
+            <Route path="/shop.tsx/products/:category" element={<Shop />} />
+            <Route path="/shop.tsx/products" element={<Shop />} />
+            <Route path="/shop.tsx/about" element={<AboutUs />} />
           </Routes>
         </ProductsDispatchContext.Provider>
       </ProductsContext.Provider>

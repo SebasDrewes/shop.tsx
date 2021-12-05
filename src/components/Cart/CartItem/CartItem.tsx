@@ -1,16 +1,16 @@
-import { ProductsAction } from "../../../context/ProductsReducer";
+import { ProductType } from "../../../context/ProductsReducer";
 import { useContext } from "react";
 import { ProductsDispatchContext } from "../../../context/ProductsContext";
 import "./CartItem.scss";
 import AddIcon from "@mui/icons-material/Add";
 import RemoveIcon from "@mui/icons-material/Remove";
 type ShopItemsPropTypes = {
-  product: ProductsAction;
+  product: ProductType;
 };
 
 export default function CartItem({ product }: ShopItemsPropTypes) {
   const dispatch = useContext(ProductsDispatchContext);
-  function addToCart(product: ProductsAction) {
+  function addToCart(product: ProductType) {
     dispatch({
       type: "added",
       id: product.id,
@@ -19,7 +19,7 @@ export default function CartItem({ product }: ShopItemsPropTypes) {
       price: product.price,
     });
   }
-  function deleteFromCart(product: ProductsAction) {
+  function deleteFromCart(product: ProductType) {
     dispatch({
       type: "deleted",
       id: product.id,

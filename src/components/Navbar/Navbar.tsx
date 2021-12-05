@@ -34,18 +34,21 @@ export default function Navbar() {
 
   return (
     <nav className="navbar">
-      <h1 className="logo" onClick={() => navigate("/home")}>
+      <h1 className="logo" onClick={() => navigate("/shop.tsx")}>
         SHOP.TSX
       </h1>
       {width > 750 ? (
         <>
-          <h1 onClick={() => navigate("/home")} className="navItem">
+          <h1 onClick={() => navigate("/shop.tsx")} className="navItem">
             Home
           </h1>
-          <h1 onClick={() => navigate("/shop")} className="navItem">
+          <h1
+            onClick={() => navigate("/shop.tsx/products")}
+            className="navItem"
+          >
             Products
           </h1>
-          <h1 onClick={() => navigate("/about")} className="navItem">
+          <h1 onClick={() => navigate("/shop.tsx/about")} className="navItem">
             About Us
           </h1>{" "}
         </>

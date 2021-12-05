@@ -6,7 +6,10 @@ export default function MainImage() {
   return (
     <div className="mainImage">
       <h1 className="imageText">Season Sale</h1>
-      <h1 className={`imageText ${shopNow}`} onClick={() => navigate("/shop")}>
+      <h1
+        className={`imageText ${shopNow}`}
+        onClick={() => navigate("/shop.tsx/products")}
+      >
         <u>Shop Now</u>
       </h1>
     </div>

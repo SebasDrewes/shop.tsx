@@ -1,13 +1,13 @@
 import { useState } from "react";
 import Snackbar from "@mui/material/Snackbar";
-import { ProductsAction } from "../../../context/ProductsReducer";
+import { ProductType } from "../../../context/ProductsReducer";
 import { useContext } from "react";
 import { ProductsDispatchContext } from "../../../context/ProductsContext";
 import "./ShopItem.scss";
 import Alert from "@mui/material/Alert";
 import { AlertTitle } from "@mui/material";
 type ShopItemsPropTypes = {
-  product: ProductsAction;
+  product: ProductType;
 };
 
 export default function ShopItem({ product }: ShopItemsPropTypes) {
@@ -19,7 +19,7 @@ export default function ShopItem({ product }: ShopItemsPropTypes) {
   /* SNACKBAR STATE  */
 
   const dispatch = useContext(ProductsDispatchContext);
-  function addToCart(product: ProductsAction) {
+  function addToCart(product: ProductType) {
     setOpen(true);
     setTimeout(() => {
       setOpen(false);
@@ -42,9 +42,9 @@ export default function ShopItem({ product }: ShopItemsPropTypes) {
           draggable={false}
         />
       </div>
-      <h3 className="productTitle">{product.title}</h3>
+      <h2 className="productTitle">{product.title}</h2>
       <div className="productInfo">
-        <p className="productPrice">${product.price.toFixed(2)}</p>
+        <h1 className="productPrice">${product.price.toFixed(2)}</h1>
         <button className="shopButton" onClick={() => addToCart(product)}>
           Add to Cart
         </button>

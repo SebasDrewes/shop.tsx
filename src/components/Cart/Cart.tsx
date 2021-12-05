@@ -25,11 +25,15 @@ export default function Cart({ close }: any) {
   ) => previousValue + currentValue.amount;
   const productsAmount = products.reduce(amountReducer, 0);
   function handleBrowseClick() {
-    navigate("/shop");
+    navigate("/shop.tsx/products");
     close(false);
   }
   function handleHomeClick() {
-    navigate("/home");
+    navigate("/shop.tsx");
+    close(false);
+  }
+  function handleAboutClick() {
+    navigate("/shop.tsx/about");
     close(false);
   }
   return (
@@ -39,10 +43,10 @@ export default function Cart({ close }: any) {
           <h1 onClick={() => handleHomeClick()} className="cartTitle">
             Home
           </h1>
-          <h1 onClick={() => navigate("/shop")} className="cartTitle">
+          <h1 onClick={() => handleBrowseClick()} className="cartTitle">
             Products
           </h1>
-          <h1 onClick={() => navigate("/about")} className="cartTitle">
+          <h1 onClick={() => handleAboutClick()} className="cartTitle">
             About Us
           </h1>
         </div>

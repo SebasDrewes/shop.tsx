@@ -7,7 +7,7 @@ export type ProductsState = {
   amount: number;
 }[];
 
-export type ProductsAction = {
+export type ProductType = {
   type?: string;
   category?: string;
   id: number;
@@ -16,10 +16,7 @@ export type ProductsAction = {
   price: number;
   amount: number;
 };
-export function ProductsReducer(
-  products: ProductsState,
-  action: ProductsAction
-) {
+export function ProductsReducer(products: ProductsState, action: ProductType) {
   switch (action.type) {
     case "added": {
       if (
