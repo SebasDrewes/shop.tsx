@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/shop.tsx/static/css/main.e39f5399.chunk.css",
-    "main.js": "/shop.tsx/static/js/main.8418151c.chunk.js",
-    "main.js.map": "/shop.tsx/static/js/main.8418151c.chunk.js.map",
+    "main.css": "/shop.tsx/static/css/main.c28bc19e.chunk.css",
+    "main.js": "/shop.tsx/static/js/main.078afdff.chunk.js",
+    "main.js.map": "/shop.tsx/static/js/main.078afdff.chunk.js.map",
     "runtime-main.js": "/shop.tsx/static/js/runtime-main.f05a21fb.js",
     "runtime-main.js.map": "/shop.tsx/static/js/runtime-main.f05a21fb.js.map",
     "static/js/2.cf3e56cf.chunk.js": "/shop.tsx/static/js/2.cf3e56cf.chunk.js",
@@ -10,7 +10,7 @@
     "static/js/3.46b15785.chunk.js": "/shop.tsx/static/js/3.46b15785.chunk.js",
     "static/js/3.46b15785.chunk.js.map": "/shop.tsx/static/js/3.46b15785.chunk.js.map",
     "index.html": "/shop.tsx/index.html",
-    "static/css/main.e39f5399.chunk.css.map": "/shop.tsx/static/css/main.e39f5399.chunk.css.map",
+    "static/css/main.c28bc19e.chunk.css.map": "/shop.tsx/static/css/main.c28bc19e.chunk.css.map",
     "static/js/2.cf3e56cf.chunk.js.LICENSE.txt": "/shop.tsx/static/js/2.cf3e56cf.chunk.js.LICENSE.txt",
     "static/media/AboutUs.scss": "/shop.tsx/static/media/aboutUs.29c99b47.jpg",
     "static/media/MainImage.scss": "/shop.tsx/static/media/mainImage.7b0e1de7.jpg",
@@ -20,7 +20,7 @@
   "entrypoints": [
     "static/js/runtime-main.f05a21fb.js",
     "static/js/2.cf3e56cf.chunk.js",
-    "static/css/main.e39f5399.chunk.css",
-    "static/js/main.8418151c.chunk.js"
+    "static/css/main.c28bc19e.chunk.css",
+    "static/js/main.078afdff.chunk.js"
   ]
 }
