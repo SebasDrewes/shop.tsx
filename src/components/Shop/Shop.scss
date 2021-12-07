@@ -51,7 +51,7 @@
 }
 .category {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   flex-wrap: wrap;
   cursor: pointer;
   transition: 100ms linear;
