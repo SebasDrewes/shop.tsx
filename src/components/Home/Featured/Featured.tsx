@@ -4,7 +4,7 @@ import womenClothes from "./womenClothes.jpg";
 import "./Featured.scss";
 export default function Featured() {
   return (
-    <div>
+    <>
       <h1 className="dealsTitle">Featured Collections</h1>
       <div className="deals">
         <CustomFeature
@@ -18,6 +18,6 @@ export default function Featured() {
           category="women"
         />
       </div>
-    </div>
+    </>
   );
 }
